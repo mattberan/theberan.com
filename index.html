@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>theberan — what Matt is building</title>
+  <meta name="description" content="Matt Beran's personal project dashboard — a living index of what he's building, writing, learning, and shipping.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%233b82f6'/><text x='32' y='44' font-family='system-ui' font-size='36' font-weight='700' text-anchor='middle' fill='white'>b</text></svg>">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">theberan</a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="projects.html" class="nav__link" data-page="projects">Projects</a></li>
+        <li><a href="writing.html" class="nav__link" data-page="writing">Writing</a></li>
+        <li><a href="learning.html" class="nav__link" data-page="learning">Learning</a></li>
+        <li><a href="media.html" class="nav__link" data-page="media">Media</a></li>
+        <li><a href="https://mattberan.com" class="nav__link nav__link--external" target="_blank" rel="noopener">mattberan.com ↗</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <!-- Hero -->
+    <header class="hero">
+      <p class="hero__eyebrow">Matt Beran</p>
+      <h1 class="hero__title">theberan</h1>
+      <p class="hero__sub">A dashboard for what I'm building — projects, writing, learning, and whatever's shipping next.</p>
+    </header>
+
+    <!-- Priority Projects -->
+    <section class="section" aria-labelledby="projectsHeading">
+      <div class="section__header">
+        <h2 class="section__title" id="projectsHeading">Projects</h2>
+        <a href="projects.html" class="section__link">All projects →</a>
+      </div>
+
+      <div class="filter-bar" role="group" aria-label="Filter projects by status">
+        <span class="filter-bar__label">Status</span>
+        <button class="filter-btn active" data-filter-status="all">All</button>
+        <button class="filter-btn" data-filter-status="active">Active</button>
+        <button class="filter-btn" data-filter-status="paused">Paused</button>
+        <button class="filter-btn" data-filter-status="complete">Complete</button>
+        <button class="filter-btn" data-filter-status="idea">Idea</button>
+        <select class="sort-select" id="sortProjects" aria-label="Sort projects">
+          <option value="priority">By priority</option>
+          <option value="updated">By last updated</option>
+        </select>
+      </div>
+
+      <div class="card-grid" id="priorityProjects" aria-live="polite">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Recent Writing -->
+    <section class="section" aria-labelledby="writingHeading">
+      <div class="section__header">
+        <h2 class="section__title" id="writingHeading">Recent Writing</h2>
+        <a href="writing.html" class="section__link">All writing →</a>
+      </div>
+      <div class="card-grid" id="recentWriting">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Recent Learning -->
+    <section class="section" aria-labelledby="learningHeading">
+      <div class="section__header">
+        <h2 class="section__title" id="learningHeading">Recent Learning</h2>
+        <a href="learning.html" class="section__link">All learning →</a>
+      </div>
+      <div class="card-grid" id="recentLearning">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+    <!-- Recent Media -->
+    <section class="section" aria-labelledby="mediaHeading">
+      <div class="section__header">
+        <h2 class="section__title" id="mediaHeading">Media</h2>
+        <a href="media.html" class="section__link">All media →</a>
+      </div>
+      <div class="card-grid card-grid--3" id="recentMedia">
+        <!-- Rendered by app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>Matt Beran — <a href="https://mattberan.com">mattberan.com</a></span>
+      <div class="footer__links">
+        <a href="https://github.com/mattberan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mattberan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

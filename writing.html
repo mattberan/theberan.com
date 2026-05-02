@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — theberan</title>
+  <meta name="description" content="Matt Beran's writing archive — project notes, reflections, and process docs.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%233b82f6'/><text x='32' y='44' font-family='system-ui' font-size='36' font-weight='700' text-anchor='middle' fill='white'>b</text></svg>">
+  <link rel="stylesheet" href="css/shared.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="writing">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">theberan</a>
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="projects.html" class="nav__link" data-page="projects">Projects</a></li>
+        <li><a href="writing.html" class="nav__link" data-page="writing">Writing</a></li>
+        <li><a href="learning.html" class="nav__link" data-page="learning">Learning</a></li>
+        <li><a href="media.html" class="nav__link" data-page="media">Media</a></li>
+        <li><a href="https://mattberan.com" class="nav__link nav__link--external" target="_blank" rel="noopener">mattberan.com ↗</a></li>
+      </ul>
+      <div class="nav__right">
+        <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">☰</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="main">
+
+    <header class="page-header">
+      <h1 class="page-header__title">Writing</h1>
+      <p class="page-header__sub">Notes, reflections, and process docs from building things.</p>
+    </header>
+
+    <div class="filter-bar" role="group" aria-label="Filter writing">
+      <span class="filter-bar__label">Project</span>
+      <select class="sort-select" id="projectFilter" aria-label="Filter by project" style="margin-left:0"></select>
+    </div>
+
+    <div class="filter-bar" role="group" aria-label="Filter by tag">
+      <span class="filter-bar__label">Tags</span>
+      <div class="tag-cloud" id="tagFilters"></div>
+    </div>
+
+    <p class="result-count" id="writingCount" aria-live="polite"></p>
+
+    <div class="card-grid" id="writingList" aria-live="polite">
+      <!-- Rendered by app.js -->
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>Matt Beran — <a href="https://mattberan.com">mattberan.com</a></span>
+      <div class="footer__links">
+        <a href="https://github.com/mattberan" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/mattberan" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
